@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ANZ Automation Suite" parallel="tests"
+       thread-count="4">
+    <test name="Chrome Browser Test">
+        <parameter name="browserValue" value="Chrome"/>
+        <classes>
+            <class name="test.com.anz.runners.ChromeTestRunner"/>
+        </classes>
+    </test>
+
+    <listeners>
+        <listener class-name="main.com.anz.reporting.GenerateReports"/>
+    </listeners>
+
+    <test name="Edge Browser Test">
+        <parameter name="browserValue" value="Edge"/>
+        <classes>
+            <class name="test.com.anz.runners.EdgeTestRunner"/>
+        </classes>
+    </test>
+
+    <listeners>
+        <listener class-name="main.com.anz.reporting.GenerateReports"/>
+    </listeners>
+
+</suite>

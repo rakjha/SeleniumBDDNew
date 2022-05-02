@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>ChromeReport</td>
+            <td>02 May 2022, 11:53</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">test.com.anz.steps.Hooks.openBrowser()</td>
+              <td>8</td>
+              <td class="duration" data-value="12704066800">12s 704ms</td>
+              <td class="duration" data-value="1588008350">1s 588ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">test.com.anz.steps.Hooks.tearDown(io.cucumber.java.Scenario)</td>
+              <td>8</td>
+              <td class="duration" data-value="29169603700">29s 169ms</td>
+              <td class="duration" data-value="3646200462">3s 646ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">test.com.anz.steps.LoanCalculationSteps.userClicksStartOverToResetTheCalculator()</td>
+              <td>1</td>
+              <td class="duration" data-value="3068488700">3s 068ms</td>
+              <td class="duration" data-value="3068488700">3s 068ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">test.com.anz.steps.LoanCalculationSteps.user_enters_and_repayments_details(java.lang.String,java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="12615902900">12s 615ms</td>
+              <td class="duration" data-value="3153975725">3s 153ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">test.com.anz.steps.LoanCalculationSteps.user_enters_annual_income(io.cucumber.datatable.DataTable)</td>
+              <td>4</td>
+              <td class="duration" data-value="5569533000">5s 569ms</td>
+              <td class="duration" data-value="1392383250">1s 392ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">test.com.anz.steps.LoanCalculationSteps.user_enters_application_type(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="6287457000">6s 287ms</td>
+              <td class="duration" data-value="1571864250">1s 571ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">test.com.anz.steps.LoanCalculationSteps.user_enters_credit_cards_limit(io.cucumber.datatable.DataTable)</td>
+              <td>4</td>
+              <td class="duration" data-value="6846708700">6s 846ms</td>
+              <td class="duration" data-value="1711677175">1s 711ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">test.com.anz.steps.LoanCalculationSteps.user_enters_current_home_loan_repayments(io.cucumber.datatable.DataTable)</td>
+              <td>4</td>
+              <td class="duration" data-value="5427767600">5s 427ms</td>
+              <td class="duration" data-value="1356941900">1s 356ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">test.com.anz.steps.LoanCalculationSteps.user_enters_expense_details(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="6636492900">6s 636ms</td>
+              <td class="duration" data-value="1659123225">1s 659ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">test.com.anz.steps.LoanCalculationSteps.user_enters_income_details_as_and(java.lang.String,java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="13018761000">13s 018ms</td>
+              <td class="duration" data-value="3254690250">3s 254ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">test.com.anz.steps.LoanCalculationSteps.user_enters_living_expense_details(io.cucumber.datatable.DataTable)</td>
+              <td>4</td>
+              <td class="duration" data-value="5435479100">5s 435ms</td>
+              <td class="duration" data-value="1358869775">1s 358ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">test.com.anz.steps.LoanCalculationSteps.user_enters_other_and_limits(java.lang.String,java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="12682419500">12s 682ms</td>
+              <td class="duration" data-value="3170604875">3s 170ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">test.com.anz.steps.LoanCalculationSteps.user_enters_other_commitments(io.cucumber.datatable.DataTable)</td>
+              <td>4</td>
+              <td class="duration" data-value="6027458300">6s 027ms</td>
+              <td class="duration" data-value="1506864575">1s 506ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">test.com.anz.steps.LoanCalculationSteps.user_enters_other_income(io.cucumber.datatable.DataTable)</td>
+              <td>4</td>
+              <td class="duration" data-value="5451671400">5s 451ms</td>
+              <td class="duration" data-value="1362917850">1s 362ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">test.com.anz.steps.LoanCalculationSteps.user_enters_other_loan_repayments(io.cucumber.datatable.DataTable)</td>
+              <td>4</td>
+              <td class="duration" data-value="5441358100">5s 441ms</td>
+              <td class="duration" data-value="1360339525">1s 360ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">test.com.anz.steps.LoanCalculationSteps.user_navigates_to_loan_calculator_page()</td>
+              <td>8</td>
+              <td class="duration" data-value="31348949300">31s 348ms</td>
+              <td class="duration" data-value="3918618662">3s 918ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">test.com.anz.steps.LoanCalculationSteps.user_selects_application_type(io.cucumber.datatable.DataTable)</td>
+              <td>4</td>
+              <td class="duration" data-value="5213530900">5s 213ms</td>
+              <td class="duration" data-value="1303382725">1s 303ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">test.com.anz.steps.LoanCalculationSteps.user_selects_as_number_of_dependents(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="46161976500">46s 161ms</td>
+              <td class="duration" data-value="11540494125">11s 540ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">test.com.anz.steps.LoanCalculationSteps.user_selects_number_of_dependents(io.cucumber.datatable.DataTable)</td>
+              <td>4</td>
+              <td class="duration" data-value="45496136900">45s 496ms</td>
+              <td class="duration" data-value="11374034225">11s 374ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">test.com.anz.steps.LoanCalculationSteps.user_selects_property_type_to_buy(io.cucumber.datatable.DataTable)</td>
+              <td>4</td>
+              <td class="duration" data-value="5329638400">5s 329ms</td>
+              <td class="duration" data-value="1332409600">1s 332ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">test.com.anz.steps.LoanCalculationSteps.user_selects_to_buy(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="6102922100">6s 102ms</td>
+              <td class="duration" data-value="1525730525">1s 525ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">test.com.anz.steps.LoanCalculationSteps.user_validates_borrowing_estimate_of_following_amount(io.cucumber.datatable.DataTable)</td>
+              <td>3</td>
+              <td class="duration" data-value="9019115900">9s 019ms</td>
+              <td class="duration" data-value="3006371966">3s 006ms</td>
+              <td class="failed">66.67%</td>
+            </tr>
+                      <tr>
+              <td class="location">test.com.anz.steps.LoanCalculationSteps.user_validates_calculated_borrowing_amount_match(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="14292765800">14s 292ms</td>
+              <td class="duration" data-value="3573191450">3s 573ms</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">test.com.anz.steps.LoanCalculationSteps.user_validates_error_message(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="2787006400">2s 787ms</td>
+              <td class="duration" data-value="2787006400">2s 787ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>24</td>
+            <td>101</td>
+            <td class="duration">5m 2s 135ms</td>
+            <td class="duration">2s 991ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
