@@ -1,19 +1,19 @@
-11:48:38,919 DEBUG test.com.anz.steps.Hooks<strong>{1}</strong>:20 - *************************** Launching Browser ***************************
-11:48:45,960 DEBUG main.com.anz.core.BaseMethods<strong>{1}</strong>:71 - Navigating to url https://www.anz.com.au/personal/home-loans/calculators-tools/much-borrow/
-11:49:14,616 DEBUG test.com.anz.steps.Hooks<strong>{1}</strong>:20 - *************************** Launching Browser ***************************
-11:49:19,970 DEBUG main.com.anz.core.BaseMethods<strong>{1}</strong>:71 - Navigating to url https://www.anz.com.au/personal/home-loans/calculators-tools/much-borrow/
-11:49:54,510 DEBUG test.com.anz.steps.Hooks<strong>{1}</strong>:31 - TC002 Validate loan borrowing capacity for "joint" with following details : FAILED
-11:49:55,379 DEBUG test.com.anz.steps.Hooks<strong>{1}</strong>:20 - *************************** Launching Browser ***************************
-11:50:01,145 DEBUG main.com.anz.core.BaseMethods<strong>{1}</strong>:71 - Navigating to url https://www.anz.com.au/personal/home-loans/calculators-tools/much-borrow/
-11:50:31,653 DEBUG test.com.anz.steps.Hooks<strong>{1}</strong>:20 - *************************** Launching Browser ***************************
-11:50:37,290 DEBUG main.com.anz.core.BaseMethods<strong>{1}</strong>:71 - Navigating to url https://www.anz.com.au/personal/home-loans/calculators-tools/much-borrow/
-11:51:05,045 DEBUG test.com.anz.steps.Hooks<strong>{1}</strong>:20 - *************************** Launching Browser ***************************
-11:51:10,371 DEBUG main.com.anz.core.BaseMethods<strong>{1}</strong>:71 - Navigating to url https://www.anz.com.au/personal/home-loans/calculators-tools/much-borrow/
-11:51:40,337 DEBUG test.com.anz.steps.Hooks<strong>{1}</strong>:20 - *************************** Launching Browser ***************************
-11:51:45,236 DEBUG main.com.anz.core.BaseMethods<strong>{1}</strong>:71 - Navigating to url https://www.anz.com.au/personal/home-loans/calculators-tools/much-borrow/
-11:52:21,849 DEBUG test.com.anz.steps.Hooks<strong>{1}</strong>:31 - TC005 Calculate loan borrowing capacity for with following details : FAILED
-11:52:22,668 DEBUG test.com.anz.steps.Hooks<strong>{1}</strong>:20 - *************************** Launching Browser ***************************
-11:52:27,890 DEBUG main.com.anz.core.BaseMethods<strong>{1}</strong>:71 - Navigating to url https://www.anz.com.au/personal/home-loans/calculators-tools/much-borrow/
-11:53:04,834 DEBUG test.com.anz.steps.Hooks<strong>{1}</strong>:31 - TC005 Calculate loan borrowing capacity for with following details : FAILED
-11:53:05,638 DEBUG test.com.anz.steps.Hooks<strong>{1}</strong>:20 - *************************** Launching Browser ***************************
-11:53:10,433 DEBUG main.com.anz.core.BaseMethods<strong>{1}</strong>:71 - Navigating to url https://www.anz.com.au/personal/home-loans/calculators-tools/much-borrow/
+13:55:52,535 DEBUG test.com.anz.steps.Hooks<strong>{1}</strong>:20 - *************************** Launching Browser ***************************
+13:56:00,396 DEBUG main.com.anz.core.BaseMethods<strong>{1}</strong>:71 - Navigating to url https://www.anz.com.au/personal/home-loans/calculators-tools/much-borrow/
+13:56:23,317 DEBUG test.com.anz.steps.Hooks<strong>{1}</strong>:20 - *************************** Launching Browser ***************************
+13:56:27,945 DEBUG main.com.anz.core.BaseMethods<strong>{1}</strong>:71 - Navigating to url https://www.anz.com.au/personal/home-loans/calculators-tools/much-borrow/
+13:56:57,532 DEBUG test.com.anz.steps.Hooks<strong>{1}</strong>:31 - TC002 Validate loan borrowing capacity for "joint" with following details : FAILED
+13:56:58,353 DEBUG test.com.anz.steps.Hooks<strong>{1}</strong>:20 - *************************** Launching Browser ***************************
+13:57:07,562 DEBUG main.com.anz.core.BaseMethods<strong>{1}</strong>:71 - Navigating to url https://www.anz.com.au/personal/home-loans/calculators-tools/much-borrow/
+13:57:32,997 DEBUG test.com.anz.steps.Hooks<strong>{1}</strong>:20 - *************************** Launching Browser ***************************
+13:57:37,749 DEBUG main.com.anz.core.BaseMethods<strong>{1}</strong>:71 - Navigating to url https://www.anz.com.au/personal/home-loans/calculators-tools/much-borrow/
+13:58:00,119 DEBUG test.com.anz.steps.Hooks<strong>{1}</strong>:20 - *************************** Launching Browser ***************************
+13:58:09,891 DEBUG main.com.anz.core.BaseMethods<strong>{1}</strong>:71 - Navigating to url https://www.anz.com.au/personal/home-loans/calculators-tools/much-borrow/
+13:58:33,365 DEBUG test.com.anz.steps.Hooks<strong>{1}</strong>:20 - *************************** Launching Browser ***************************
+13:58:38,727 DEBUG main.com.anz.core.BaseMethods<strong>{1}</strong>:71 - Navigating to url https://www.anz.com.au/personal/home-loans/calculators-tools/much-borrow/
+13:59:08,421 DEBUG test.com.anz.steps.Hooks<strong>{1}</strong>:31 - TC005 Calculate loan borrowing capacity for with following details : FAILED
+13:59:09,231 DEBUG test.com.anz.steps.Hooks<strong>{1}</strong>:20 - *************************** Launching Browser ***************************
+13:59:14,066 DEBUG main.com.anz.core.BaseMethods<strong>{1}</strong>:71 - Navigating to url https://www.anz.com.au/personal/home-loans/calculators-tools/much-borrow/
+13:59:44,447 DEBUG test.com.anz.steps.Hooks<strong>{1}</strong>:31 - TC005 Calculate loan borrowing capacity for with following details : FAILED
+13:59:45,236 DEBUG test.com.anz.steps.Hooks<strong>{1}</strong>:20 - *************************** Launching Browser ***************************
+13:59:50,008 DEBUG main.com.anz.core.BaseMethods<strong>{1}</strong>:71 - Navigating to url https://www.anz.com.au/personal/home-loans/calculators-tools/much-borrow/
