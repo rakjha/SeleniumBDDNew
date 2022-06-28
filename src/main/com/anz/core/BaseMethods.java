@@ -21,60 +21,56 @@ public class BaseMethods {
     public static ThreadLocal<WebDriver> WEB_DRIVER_THREAD_LOCAL = new InheritableThreadLocal<>();
     public static ThreadLocal<String> browserName = new InheritableThreadLocal<>();
 
-    public static Properties CONFIG = null;
+    public static Properties CONFIG = ReadConfigData.loadConfigFile();
 
     public static void getBrowserInstance(String browserValue) {
 
-        CONFIG = loadConfigFileData();
+        if (browserValue.equalsIgnoreCase("Chrome"))
+            launchChromeBrowser();
 
-        if (browserValue.equalsIgnoreCase("Chrome")) {
+        else if (browserValue.equalsIgnoreCase("Firefox"))
+            launchFirefoxBrowser();
 
-            WebDriverManager.chromedriver().setup();
-            ChromeOptions options = new ChromeOptions();
-            options.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
-            options.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+        else if (browserValue.equalsIgnoreCase("Edge"))
+            launchEdgeBrowser();
+        else
+            launchChromeBrowser();
+    }
 
-            WEB_DRIVER_THREAD_LOCAL.set(new ChromeDriver(options));
-            WEB_DRIVER_THREAD_LOCAL.get().manage().window().maximize();
+    public static void launchChromeBrowser(){
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        options.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
 
-        } else if (browserValue.equalsIgnoreCase("Firefox")) {
+        WEB_DRIVER_THREAD_LOCAL.set(new ChromeDriver(options));
+        WEB_DRIVER_THREAD_LOCAL.get().manage().window().maximize();
+    }
 
-            WebDriverManager.firefoxdriver().setup();
+    public static void launchFirefoxBrowser(){
+        WebDriverManager.firefoxdriver().setup();
 
-            FirefoxOptions options = new FirefoxOptions();
-            options.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
-            options.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+        FirefoxOptions options = new FirefoxOptions();
+        options.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
 
-            WEB_DRIVER_THREAD_LOCAL.set(new FirefoxDriver(options));
-            WEB_DRIVER_THREAD_LOCAL.get().manage().window().maximize();
+        WEB_DRIVER_THREAD_LOCAL.set(new FirefoxDriver(options));
+        WEB_DRIVER_THREAD_LOCAL.get().manage().window().maximize();
+    }
 
-        } else if (browserValue.equalsIgnoreCase("Edge")) {
-            WebDriverManager.edgedriver().setup();
+    public static void launchEdgeBrowser(){
+        WebDriverManager.edgedriver().setup();
 
-            EdgeOptions options = new EdgeOptions();
-            options.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-            options.setCapability(CapabilityType.SUPPORTS_JAVASCRIPT, true);
-            options.setCapability(CapabilityType.SUPPORTS_ALERTS, true);
-            options.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
+        EdgeOptions options = new EdgeOptions();
+        options.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
 
-            WEB_DRIVER_THREAD_LOCAL.set(new EdgeDriver(options));
-            WEB_DRIVER_THREAD_LOCAL.get().manage().window().maximize();
-        }
-
+        WEB_DRIVER_THREAD_LOCAL.set(new EdgeDriver(options));
+        WEB_DRIVER_THREAD_LOCAL.get().manage().window().maximize();
     }
 
     public static void applicationURL() {
-
         String baseURL = CONFIG.getProperty("siteURL");
-
         WEB_DRIVER_THREAD_LOCAL.get().get(baseURL);
         LOG.debug("Navigating to url " + baseURL);
-        WEB_DRIVER_THREAD_LOCAL.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        WEB_DRIVER_THREAD_LOCAL.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
     }
-
-    public static Properties loadConfigFileData() {
-        return ReadConfigData.loadConfigFile();
-    }
-
 }
